@@ -3,7 +3,7 @@ document.getElementById('subscription-form').addEventListener('submit', function
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
-    fetch('/subscribe', {
+    fetch('/api/subscribe', { // 更改这里的路径
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,3 +22,4 @@ document.getElementById('subscription-form').addEventListener('submit', function
         console.error('Error:', error);
     });
 });
+
