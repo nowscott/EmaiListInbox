@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EverydayTechNews Subscription</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  p {
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+  form {
+    width: 100%;
+    max-width: 500px;
+  }
+  input[type="text"],
+  input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  #status-message {
+    margin-top: 15px;
+  }
+</style>
+</head>
+<body>
+  <h1>EverydayTechNews Subscription</h1>
+  <p>Subscribe to our daily tech news</p>
+  <form id="subscription-form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+    <div id="status-message"></div> <!-- Status message display area -->
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

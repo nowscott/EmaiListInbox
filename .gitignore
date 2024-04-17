@@ -1,0 +1,19 @@
+# 依赖目录
+node_modules/
+
+# 环境变量
+.env
+
+# 构建输出
+/dist
+
+# 日志
+*.log
+
+# 编辑器目录和文件
+.vscode/
+.idea/
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
