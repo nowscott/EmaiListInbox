@@ -11,7 +11,7 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 ## 技术栈
 
 - **前端**: HTML, CSS, JavaScript
-- **后端**: Node.js (如果适用)
+- **后端**: Node.js 
 - **API**: Notion API
 - **部署**: Vercel
 
