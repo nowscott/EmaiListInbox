@@ -24,8 +24,7 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 |   |-- style.css
 |-- .gitignore
 |-- README.md
-|-- package.json (如果使用了 Node.js)
-|-- server.js (如果有服务器端代码)
+|-- package.json
 ```
 - `public/` - 包含网站的静态文件。
 - `index.html` - 订阅表单的主页面。
@@ -33,15 +32,14 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 - `style.css` - 定义网页样式的 CSS 文件。
 - `.gitignore` - 指定 git 忽略的文件和目录。
 - `README.md` - 项目的文档说明文件。
-- `package.json` - Node.js 项目的依赖配置文件（如果适用）。
-- `server.js` - 服务器端逻辑文件（如果有服务器端代码）。
+- `package.json` - Node.js 项目的依赖配置文件。
 
 ## 如何部署
 
 要部署 TechNewsLetter 项目，请按照以下步骤操作：
 
 1. **在本地配置项目**:
-   克隆项目到本地并安装所有依赖（如果有后端代码）。
+   克隆项目到本地并安装所有依赖。
 
 ```bash
    git clone https://github.com/your-username/TechNewsLetter.git
@@ -49,12 +47,12 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
    npm install  # 如果有后端代码
 ```
 
-2. **在 Vercel 中部署**:
+1. **在 Vercel 中部署**:
    - 登录到 [Vercel](https://vercel.com) 并导入您的项目仓库。
    - 根据需要配置项目（例如，设置环境变量）。
    - 点击“Deploy”部署您的项目。
 
-3. **设置 Notion API**:
+2. **设置 Notion API**:
    - 在 Notion 配置您的集成并获取 API 密钥。
    - 在 Vercel 的项目设置中添加 Notion API 密钥作为环境变量。
 
