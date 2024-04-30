@@ -16,7 +16,7 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 - **部署**: Vercel
 
 ## 项目结构
-```python
+```
 /TechNewsLetter
 |-- /public
 |   |-- index.html
