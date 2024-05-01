@@ -17,7 +17,7 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 
 ## 项目结构
 ```
-/TechNewsLetter
+/EmaiListInbox
 |-- /public
 |   |-- index.html
 |   |-- script.js
