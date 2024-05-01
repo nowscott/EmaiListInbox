@@ -60,7 +60,7 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 
 ## 贡献
 
-如果您想对 TechNewsLetter 做出贡献，请随时克隆仓库并提交 pull 请求。
+如果您想对 EmaiListInbox 做出贡献，请随时克隆仓库并提交 pull 请求。
 
 ## 联系方式
 
