@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>EverydayTechNews Subscription</title>
+<title>每日科技新闻订阅页面</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <style>
 body, html {
@@ -22,7 +22,7 @@ h1 {
 }
 p {
   margin-bottom: 1em;
-  font-weight: bold;
+  font-weight: normal;
 }
 form {
   width: 100%;
@@ -62,12 +62,12 @@ button[type="submit"]:hover {
 </style>
 </head>
 <body>
-  <h1>EverydayTechNews Subscription</h1>
-  <p>Subscribe to our daily tech news</p>
+  <h1>每日科技新闻订阅</h1>
+  <p>欢迎订阅我们的每日科技新闻邮件列表，获取最新、最前沿的科技资讯，助您掌握科技脉搏。</p>
   <form id="subscription-form" autocomplete="off">
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-    <button type="submit">Subscribe</button>
+    <input type="text" id="name" name="name" placeholder="你的昵称" required>
+    <input type="email" id="email" name="email" placeholder="你的邮箱" required>
+    <button type="submit">订阅</button>
     <div id="status-message"></div> <!-- Status message display area -->
   </form>
   <script src="script.js"></script>

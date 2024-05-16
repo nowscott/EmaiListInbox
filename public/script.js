@@ -18,7 +18,7 @@ document.getElementById('subscription-form').addEventListener('submit', function
         window.location.href = 'success.html';
     })
     .catch(error => {
-        alert('订阅失败，请稍后重试，或联系 nowscott@qq.com');
+        alert('订阅失败，请稍后重试，或联系:nowscott@qq.com');
         console.error('Error:', error);
     });
 });
