@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-app.post('/api/subscribe', async (req, res) => {  // 更改路径为 /api/subscribe
+app.post('/api/subscribe', async (req, res) => {
     const { name, email } = req.body;
 
     try {
