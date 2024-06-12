@@ -3,8 +3,13 @@ document.getElementById('subscription-form').addEventListener('submit', function
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const statusMessage = document.getElementById('status-message');
+    const submitButton = document.querySelector('button[type="submit"]');
 
-    fetch('/api/subscribe', {  // 确保路径为 /api/subscribe
+    // 禁用提交按钮
+    submitButton.disabled = true;
+    submitButton.textContent = '订阅中...';
+
+    fetch('/api/subscribe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -22,6 +27,12 @@ document.getElementById('subscription-form').addEventListener('submit', function
     })
     .catch(error => {
         statusMessage.textContent = '订阅失败，请稍后重试，或联系:nowscott@qq.com';
+        statusMessage.style.color = 'red';
         console.error('Error:', error);
+    })
+    .finally(() => {
+        // 重新启用提交按钮
+        submitButton.disabled = false;
+        submitButton.textContent = '订阅';
     });
 });
