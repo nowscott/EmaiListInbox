@@ -1,0 +1,16 @@
+/EmaiListInbox
+|-- /public
+    |-- favicon.ico
+    |-- index.html
+    |-- script.js
+    |-- success.html
+|-- /api
+    |-- sendNotificationEmail.js
+    |-- addSubscriberToNotion.js
+|-- LICENSE
+|-- server.js
+|-- README.md
+|-- .gitignore
+|-- package-lock.json
+|-- package.json
+|-- main.py

@@ -19,21 +19,56 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
 ```
 /EmaiListInbox
 |-- /public
-|   |-- index.html
-|   |-- script.js
-|   |-- style.css
-|-- .gitignore
+    |-- favicon.ico
+    |-- index.html
+    |-- script.js
+    |-- success.html
+|-- /api
+    |-- sendNotificationEmail.js
+    |-- addSubscriberToNotion.js
+|-- LICENSE
+|-- server.js
 |-- README.md
+|-- .gitignore
+|-- package-lock.json
 |-- package.json
+|-- main.py
 ```
-- `public/` - 包含网站的静态文件。
-- `index.html` - 订阅表单的主页面。
-- `script.js` - 处理订阅表单逻辑的 JavaScript 文件。
-- `style.css` - 定义网页样式的 CSS 文件。
-- `.gitignore` - 指定 git 忽略的文件和目录。
-- `README.md` - 项目的文档说明文件。
-- `package.json` - Node.js 项目的依赖配置文件。
+以下是每个文件的简介：
 
+## 文件简介
+
+### public/
+这个目录包含静态文件和前端代码。
+
+- **favicon.ico**: 网站的图标文件，显示在浏览器标签页上。
+- **index.html**: 订阅页面的主HTML文件，用户在这里输入他们的姓名和电子邮件地址进行订阅。
+- **script.js**: 处理前端表单提交的JavaScript代码，将用户输入的数据发送到服务器。
+- **success.html**: 用户成功订阅后的确认页面。
+
+### api/
+这个目录包含服务器端的功能模块，用于处理Notion写入和邮件发送。
+
+- **sendNotificationEmail.js**: 封装发送电子邮件通知的功能，使用nodemailer库。
+- **addSubscriberToNotion.js**: 封装将订阅者信息写入Notion数据库的功能，使用node-fetch库与Notion API交互。
+
+### LICENSE
+项目的许可证文件，规定了项目的使用和分发权限。
+
+### server.js
+服务器的主入口文件，设置Express服务器并处理API请求，将订阅者信息写入Notion并发送通知邮件。
+
+### README.md
+项目的说明文件，包含项目简介、安装和使用说明。
+
+### .gitignore
+Git忽略文件，列出不需要添加到版本控制中的文件和目录（如node_modules、日志文件等）。
+
+### package.json
+Node.js项目的配置文件，包含项目的元数据、依赖项和脚本命令。
+
+
+ 
 ## 如何部署
 
 要部署 TechNewsLetter 项目，请按照以下步骤操作：
@@ -42,9 +77,9 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
    克隆项目到本地并安装所有依赖。
 
 ```bash
-   git clone https://github.com/your-username/TechNewsLetter.git
-   cd TechNewsLetter
-   npm install  # 如果有后端代码
+   git clone https://github.com/nowscott/EmaiListInbox.git
+   cd EmaiListInbox
+   npm install  
 ```
 
 1. **在 Vercel 中部署**:
@@ -52,8 +87,9 @@ EmaiListInbox 是一个简单的订阅服务，允许用户订阅日常技术新
    - 根据需要配置项目（例如，设置环境变量）。
    - 点击“Deploy”部署您的项目。
 
-2. **设置 Notion API**:
+2. **设置环境变量**:
    - 在 Notion 配置您的集成并获取 API 密钥。
+   - 在 Vercel 的项目设置中添加 Notion API 密钥作为环境变量。
    - 在 Vercel 的项目设置中添加 Notion API 密钥作为环境变量。
 
 更多详细信息，请查看 [Vercel 文档](https://vercel.com/docs) 关于部署的部分。

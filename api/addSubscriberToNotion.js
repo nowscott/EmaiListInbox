@@ -3,13 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export default function(req, res) {
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method Not Allowed' });
-    }
-
-    const { name, email } = req.body;
-
+export const addSubscriberToNotion = async (name, email) => {
     const url = 'https://api.notion.com/v1/pages';
     const data = {
         parent: { database_id: process.env.NOTION_DATABASE_ID },
@@ -23,7 +17,7 @@ export default function(req, res) {
         }
     };
 
-    fetch(url, {
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${process.env.NOTION_API_KEY}`,
@@ -31,13 +25,11 @@ export default function(req, res) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        res.status(200).json(data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Internal server error' });
     });
-}
+
+    if (!response.ok) {
+        throw new Error('Failed to add subscriber to Notion');
+    }
+
+    return response.json();
+};

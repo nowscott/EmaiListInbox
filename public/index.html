@@ -27,7 +27,7 @@ p {
 form {
   width: 100%;
   max-width: 500px;
-  box-sizing: border-box; /* Ensures padding and border are included in width */
+  box-sizing: border-box;
 }
 input[type="text"],
 input[type="email"] {
@@ -37,7 +37,7 @@ input[type="email"] {
   border: 2px solid #333;
   border-radius: 5px;
   font-size: 1em;
-  box-sizing: border-box; /* Ensures padding and border are included in width */
+  box-sizing: border-box;
 }
 button[type="submit"] {
   width: 100%;
@@ -50,15 +50,16 @@ button[type="submit"] {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  box-sizing: border-box; /* Ensures padding and border are included in width */
+  box-sizing: border-box;
 }
 button[type="submit"]:hover {
   background-color: #555;
 }
 #status-message {
   margin-top: 15px;
+  font-size: 1em;
+  color: red;
 }
-
 </style>
 </head>
 <body>
@@ -68,7 +69,7 @@ button[type="submit"]:hover {
     <input type="text" id="name" name="name" placeholder="你的昵称" required>
     <input type="email" id="email" name="email" placeholder="你的邮箱" required>
     <button type="submit">订阅</button>
-    <div id="status-message"></div> <!-- Status message display area -->
+    <div id="status-message"></div> <!-- 状态消息显示区域 -->
   </form>
   <script src="script.js"></script>
 </body>
