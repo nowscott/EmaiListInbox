@@ -4,7 +4,7 @@ document.getElementById('subscription-form').addEventListener('submit', function
     const email = document.getElementById('email').value;
     const statusMessage = document.getElementById('status-message');
 
-    fetch('/api/subscribe', {
+    fetch('/subscribe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
